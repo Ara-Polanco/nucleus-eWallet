@@ -38,6 +38,9 @@ img {
     display: block;
 }
 
+.mask {
+    overflow: hidden;
+}
 /* Selector de Atributo, lo selecciona si finaliza con el valor del atributo */
 [class$="__container"] {
     max-width: 120rem;
@@ -219,4 +222,71 @@ img {
         font-size: 2rem;
     }
 }
+
+
+/* Security */
+.security {
+    background-color: var(--primario);
+    padding: 5rem 0;
+    position: relative;
+    margin: 10rem 0;
+    padding: 20rem 0;
+    overflow: hidden;
+    /* Para solucion con efecto de diagonal en una seccion con bgc */
+  /*   transform: rotate(3deg) scale(1.3);
+    margin: 22rem 0; */
+}
+
+/* .security__container {
+    transform: rotate(-3deg) scale(.75);
+} */
+.security::before,
+.security::after {
+    background-color: var(--blanco);
+    content: '';
+    height: 20rem;
+    width: 120%;
+    position: absolute;
+}
+
+.security::before { 
+    top: -10rem;
+    left: 0;
+    transform: rotate(3deg);
+}
+
+.security::after {
+    transform: rotate(-3deg);
+    bottom: -10rem;
+    left: 0;
+}
+
+.security__heading {
+    color: var(--blanco);
+}
+
+.security__image {
+    margin: var(--separacion) 0;
+}
+
+@media (min-width: 768px) {  
+    .security__heading {
+        font-size: 3.4rem;
+    }
+
+    .security__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+        align-items: center;
+    }
+}
+
+@media (min-width: 992px) {  
+    .security__heading {
+        font-size: 4rem;
+    }
+}
+
+/*  */
 

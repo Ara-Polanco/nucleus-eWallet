@@ -127,6 +127,7 @@ img {
     .nav__link {
         color: var(--blanco);
         font-size: 2rem;
+    
     }
 
     .header__image {
@@ -148,7 +149,7 @@ img {
 
 @media (min-width: 1280px) {  
     .header {
-        background-size: 100rem;
+        background-size: 110rem;
     }
 }
 
@@ -161,6 +162,14 @@ img {
 .list__heading {
     color: var(--primario);
     margin: 0;
+}
+
+.list__number {
+    font-size: 4rem;
+    color: var(--primario);
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
 }
 
 .list__text {
@@ -184,6 +193,8 @@ img {
     transform: scale(1.1);
 }
 
+
+
 @media (min-width: 768px) {  
     .nucleus__heading {
         font-size: 3.4rem;
@@ -202,6 +213,17 @@ img {
     }
     .list__text {
         font-size: 1.8rem;
+    }
+
+    .list__number {
+        flex-basis: 20rem;
+    }
+
+    .list__element--2col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
     }
 }
 
@@ -288,5 +310,39 @@ img {
     }
 }
 
-/*  */
+/* commissions */
+.commissions__text {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (min-width: 768px) {  
+    .commissions__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+        align-items: center;
+    }
+
+    .commissions__heading {
+        font-size: 3.4rem;
+    }
+
+    .commissions__text {
+        font-size: 2.2rem;
+    }
+
+    
+}
+
+@media (min-width: 992px) {  
+    .commissions__heading {
+        font-size: 4.5rem;
+    }
+
+    .commissions__text {
+        font-size: 3rem;
+    }
+}
 
